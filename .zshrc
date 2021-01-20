@@ -6,6 +6,8 @@
 # Variables
 export CLICOLOR=1
 export EDITOR=vim
+# Quit less if text fits in one screen, very useful for git commands
+export LESS="-F$LESS"
 
 # Needed for Kisi rails
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
