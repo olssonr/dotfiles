@@ -7,15 +7,7 @@
 export CLICOLOR=1
 export EDITOR=vim
 # Quit less if text fits in one screen, very useful for git commands
-export LESS="-F$LESS"
-
-# Needed for Kisi rails
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-# Disable spring bootloader, ruby was hogging CPU for kisi-api rails app
-export DISABLE_SPRING=true
-
-# debug listen gem
-LISTEN_GEM_DEBUGGING=debug
+#export LESS="-F$LESS"
 
 # Git completion
 #. ~/dotfiles/git-completion.zsh
@@ -24,4 +16,4 @@ LISTEN_GEM_DEBUGGING=debug
 # eval `dircolors $HOME/dircolors-solarized/dircorols.ansi-light
 
 # Load rbenv
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
