@@ -9,6 +9,11 @@ export EDITOR=vim
 # Quit less if text fits in one screen, very useful for git commands
 #export LESS="-F$LESS"
 
+## Paths ##
+
+# Add homebrew to path
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Git completion
 #. ~/dotfiles/git-completion.zsh
 
