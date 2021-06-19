@@ -14,11 +14,12 @@ export EDITOR=vim
 # Add homebrew to path
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Load rbenv
+eval "$(rbenv init -)"
+
 # Git completion
 #. ~/dotfiles/git-completion.zsh
 
 # Solarized dir color for ls, needs GNU dircolor, does not work on mac??
 # eval `dircolors $HOME/dircolors-solarized/dircorols.ansi-light
 
-# Load rbenv
-#eval "$(rbenv init -)"
