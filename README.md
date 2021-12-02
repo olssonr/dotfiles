@@ -6,6 +6,7 @@ My .files for zsh and git
 
 * source dotfiles/.zshrc in your ~/.zhsrc and you will get all zsh dotfiles
 * source dotfiles/.vimrc in your ~/.vimrc and you will show cursor position and touch type move bindings in vim
+* run `git config --global core.excludesFile '~/dotfiles/.gitignore'` and you will get my ignore file
 
 ## How to configure Rick's Vim bindings in VSCode
 
