@@ -3,23 +3,26 @@
 # Source aliases
 . ~/dotfiles/.zsh_aliases
 
-# Variables
+## Variables ##
+
 export CLICOLOR=1
 export EDITOR=vim
-# Quit less if text fits in one screen, very useful for git commands
-#export LESS="-F$LESS"
 
 ## Paths ##
 
 # Add homebrew to path
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Load rbenv
-eval "$(rbenv init -)"
+## Load tools ##
 
-# Git completion
-#. ~/dotfiles/git-completion.zsh
+# Load asdf
+. "$HOME/.asdf/asdf.sh"
 
-# Solarized dir color for ls, needs GNU dircolor, does not work on mac??
-# eval `dircolors $HOME/dircolors-solarized/dircorols.ansi-light
+# Add asdf completion
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
+# TODO: Add wezterm config in dotfiles too?
 
