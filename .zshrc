@@ -16,7 +16,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 ## Load tools ##
 
 # Load asdf
-. "$HOME/.asdf/asdf.sh"
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # Add asdf completion
 # append completions to fpath
