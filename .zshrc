@@ -8,12 +8,26 @@
 export CLICOLOR=1
 export EDITOR=vim
 
+export PYENV_ROOT="$HOME/.pyenv"
+
 ## Paths ##
 
 # Add homebrew to path
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Add pyenv to path
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+
 ## Load tools ##
+
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
+# Load pyenv
+eval "$(pyenv init - zsh)"
+
+# Load pipx
+eval "$(register-python-argcomplete pipx)"
 
 # Load asdf
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
@@ -21,8 +35,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Add asdf completion
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
-# initialise completions with ZSH's compinit
-autoload -Uz compinit && compinit
 
 ## Show current branch in prompt ##
 
