@@ -18,6 +18,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Add pyenv to path
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 
+# Add .NET Core SDK tools
+export PATH="$PATH:$HOME/.dotnet/tools"
+
 ## Load tools ##
 
 # initialise completions with ZSH's compinit
